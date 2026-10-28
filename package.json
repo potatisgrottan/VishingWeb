@@ -1,0 +1,16 @@
+{
+  "name": "vishingweb-root",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "vishinguard"
+  ],
+  "scripts": {
+    "dev": "npm --workspace=vishinguard run dev",
+    "build": "npm --workspace=vishinguard run build",
+    "start": "npm --workspace=vishinguard run start"
+  },
+  "dependencies": {
+    "next": "^16.4.3"
+  }
+}
