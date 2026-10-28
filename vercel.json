@@ -1,0 +1,7 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "nextjs",
+  "installCommand": "cd vishinguard && npm install",
+  "buildCommand": "cd vishinguard && npm run build",
+  "outputDirectory": "vishinguard/.next"
+}
