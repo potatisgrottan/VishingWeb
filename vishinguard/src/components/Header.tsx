@@ -2,8 +2,9 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Shield, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -40,8 +41,14 @@ export default function Header() {
             }}
             className="flex items-center gap-3 group"
           >
-            <div className="w-9 h-9 bg-[#0D4F55] rounded-sm flex items-center justify-center transition-colors group-hover:bg-[#063338]">
-              <Shield className="w-5 h-5 text-[#F7F0E1]" />
+            <div className="w-9 h-9 rounded-sm overflow-hidden flex items-center justify-center flex-shrink-0 relative">
+              <Image
+                src="/images/vishing_logo_without_words.jpeg"
+                alt="Vishinguard logo"
+                width={36}
+                height={36}
+                className="w-full h-full object-cover rounded-sm"
+              />
             </div>
             <span className="font-serif text-[20px] font-[900] text-[#0D4F55] tracking-tight">
               Vishinguard

@@ -44,7 +44,7 @@ export default function HomePage() {
 
               {/* Massive headline */}
               <h1 className="font-serif text-[52px] md:text-[72px] lg:text-[88px] font-[300] leading-[0.92] text-[#063338] tracking-tight">
-                Din riddare
+                Din beskyddare
                 <br />
                 <span className="font-[900] italic">i fickan</span>
               </h1>
@@ -54,14 +54,14 @@ export default function HomePage() {
 
               {/* Subtitle */}
               <p className="font-serif text-[18px] md:text-[22px] font-[300] leading-[1.45] text-[#4A8A91] max-w-[480px] mb-10">
-                Vishinguard är din personliga digitala beskyddare. Appen lyssnar, läser och varnar när bedragare försöker lura dig – direkt i din Android-telefon, utan att någon data lämnar mobilen.
+                Vishinguard är din personliga digitala beskyddare. Appen lyssnar, läser och varnar när bedragare försöker lura dig - direkt i din telefon, utan att någon data lämnar mobilen.
               </p>
 
               {/* Bullet points with knight accent */}
               <div className="space-y-4 mb-10">
                 {[
-                  "Bevakar samtal, meddelanden och aviseringar i realtid",
-                  "AI-analys sker lokalt på din telefon — ingen data lämnar enheten",
+                  "Bevakar samtal, meddelanden och e-post i realtid",
+                  "AI-analys sker lokalt på din telefon och ingen data lämnar därmed enheten",
                   "Blockerar hotfulla transaktioner och ger dig tid att tänka om",
                 ].map((text, i) => (
                   <div key={i} className="flex items-start gap-3">
@@ -91,8 +91,8 @@ export default function HomePage() {
               <div className="relative mb-8">
                 <div className="w-full aspect-[4/3] bg-[#063338] rounded-sm overflow-hidden relative">
                   <Image
-                    src="/images/knight-protector.png"
-                    alt="Vishinguard riddarmaskot — en bestämd riddare i mörkblå rustning med guldaccenter och sköld"
+                    src="/images/knight-hero.png"
+                    alt="Vishinguard riddarmaskot — en bestämd riddare i grön rustning med guldaccenter och sköld"
                     fill
                     priority
                     sizes="(max-width: 1024px) 100vw, 420px"

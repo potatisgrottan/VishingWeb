@@ -17,10 +17,10 @@ const figtree = Figtree({
 });
 
 export const metadata: Metadata = {
-  title: "Vishinguard — Din riddare i fickan | Proaktivt skydd mot vishing & bedrägerier",
-  description: "Vishinguard är din personliga digitala beskyddare. Appen lyssnar, läser och varnar när bedragare försöker lura dig – direkt i din Android-telefon utan att data lämnar mobilen.",
+  title: "Vishinguard — Din beskyddare i fickan | Proaktivt skydd mot vishing & bedrägerier",
+  description: "Vishinguard är din personliga digitala beskyddare. Appen lyssnar, läser och varnar när bedragare försöker lura dig - direkt i din telefon, utan att någon data lämnar mobilen.",
   icons: {
-    icon: "/favicon.ico",
+    icon: "/icon.jpeg",
   },
 };
 

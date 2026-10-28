@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
-import { Shield, Mail } from "lucide-react";
+import Image from "next/image";
+import { Mail } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -10,8 +11,14 @@ export default function Footer() {
           {/* Logo and tagline */}
           <div className="md:w-[280px] flex-shrink-0">
             <Link href="/" className="flex items-center gap-3 mb-4 group">
-              <div className="w-8 h-8 bg-[#0D4F55] rounded-sm flex items-center justify-center transition-colors group-hover:bg-[#063338]">
-                <Shield className="w-4 h-4 text-[#F7F0E1]" />
+              <div className="w-8 h-8 rounded-sm overflow-hidden flex items-center justify-center flex-shrink-0 relative">
+                <Image
+                  src="/images/vishing_logo_without_words.jpeg"
+                  alt="Vishinguard logo"
+                  width={32}
+                  height={32}
+                  className="w-full h-full object-cover rounded-sm"
+                />
               </div>
               <span className="font-serif text-[18px] font-[900] text-[#0D4F55] tracking-tight">
                 Vishinguard
