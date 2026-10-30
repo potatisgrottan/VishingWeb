@@ -151,6 +151,16 @@ export default function WaitlistForm({
               {subtitle}
             </p>
           )}
+          {/* Free trial badge */}
+          <div
+            className={`mt-3 inline-flex items-center gap-2 px-3 py-1.5 rounded-sm text-[12px] font-[700] tracking-[0.05em] ${
+              isDark
+                ? "bg-[#F7F0E1]/15 text-[#F7F0E1]"
+                : "bg-[#0D4F55]/10 text-[#0D4F55]"
+            }`}
+          >
+            Gratis testversion i en månad!
+          </div>
         </div>
       )}
 

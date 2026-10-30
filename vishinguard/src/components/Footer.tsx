@@ -93,7 +93,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="mt-12 pt-6 border-t border-[#0D4F55]/10 flex flex-col md:flex-row justify-between items-center gap-4">
           <span className="text-[11px] tracking-[0.15em] uppercase text-[#4A8A91]">
-            © 2025 Vishinguard. Alla rättigheter förbehållna.
+            © Vishinguard. Alla rättigheter förbehållna.
           </span>
           <span className="text-[11px] tracking-[0.15em] uppercase text-[#4A8A91]">
             Kommer först till Android.

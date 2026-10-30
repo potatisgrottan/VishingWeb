@@ -19,7 +19,7 @@ import WaitlistForm from "@/components/WaitlistForm";
 export const metadata: Metadata = {
   title: "Så fungerar det — Vishinguard | Teknisk förklaring & AI-skydd",
   description:
-    "Tre enkla steg mellan dig och en säkrare vardag: Insamling, AI-analys och Ingrepp. Lär dig om Bank Protection och Notification Analysis.",
+    "Tre enkla steg mellan dig och en säkrare vardag: Insamling, AI-analys och Ingrepp. Lär dig om Bankskydd och Notisanalys.",
 };
 
 export default function KnowMorePage() {
@@ -44,14 +44,14 @@ export default function KnowMorePage() {
                 Läsningstid 3 min
               </span>
             </div>
-            <h1 className="font-serif text-[48px] md:text-[64px] lg:text-[80px] font-[300] leading-[0.92] text-[#063338] tracking-tight">
+            <h1 className="font-serif text-[36px] sm:text-[44px] md:text-[54px] lg:text-[68px] font-[300] leading-[1.18] md:leading-[1.15] text-[#063338] tracking-normal">
               Så fungerar
               <br />
               <span className="font-[900] italic">Vishinguard</span>
             </h1>
             <div className="w-20 h-[2px] bg-[#0D4F55] mt-8 mb-6" />
             <p className="font-serif text-[18px] md:text-[22px] font-[300] leading-[1.45] text-[#4A8A91] max-w-[560px]">
-              Tre enkla steg mellan dig och en säkrare vardag. Lokal AI som analyserar i realtid och aldrig sänder din data någon annanstans.
+              Tre enkla steg mellan dig och en säkrare vardag. Lokal AI på din telefon med uppgift att skydda dig och din data.
             </p>
           </div>
         </div>
@@ -75,7 +75,7 @@ export default function KnowMorePage() {
                 label: "AI-analys",
                 title: "2. AI-analys",
                 description:
-                  "Med hjälp av artificiell intelligens analyseras mönster, avsändare och innehåll i realtid. AI:n letar efter varningstecken som kända bluffmetoder, hotfulla formuleringar eller ovanliga förfrågningar. Allt sker direkt i din mobil via lokala modeller.",
+                  "Med hjälp av artificiell intelligens analyseras mönster, avsändare och innehåll i realtid. AI:n letar efter varningstecken som kända bluffmetoder, hotfulla formuleringar eller ovanliga förfrågningar. Allt sker direkt i din telefon via lokala modeller.",
                 icon: BrainCircuit,
               },
               {
@@ -125,7 +125,7 @@ export default function KnowMorePage() {
                 Skyddsfunktion
               </div>
               <h2 className="font-serif text-[36px] md:text-[48px] font-[300] text-[#063338] leading-[1.1] mb-6">
-                Bank <span className="font-[900] italic">Protection</span>
+                Bank<span className="font-[900] italic">skydd</span>
               </h2>
               <div className="w-16 h-[2px] bg-[#0D4F55] mb-8" />
               <p className="text-[16px] leading-[1.7] text-[#4A8A91] mb-6 max-w-[520px]">
@@ -181,7 +181,7 @@ export default function KnowMorePage() {
                 </div>
                 <div className="px-6 py-3 bg-[#EAE1CC] border-t border-[#0D4F55]/10">
                   <span className="text-[10px] tracking-[0.15em] uppercase text-[#4A8A91]">
-                    Figur 1: Bank Protection skyddar under samtalet
+                    Figur 1: Bankskydd skyddar under samtalet
                   </span>
                 </div>
               </div>
@@ -199,11 +199,11 @@ export default function KnowMorePage() {
                 Skyddsfunktion
               </div>
               <h2 className="font-serif text-[36px] md:text-[48px] font-[300] text-[#063338] leading-[1.1] mb-6">
-                Notification <span className="font-[900] italic">Analysis</span>
+                Notis<span className="font-[900] italic">analys</span>
               </h2>
               <div className="w-16 h-[2px] bg-[#0D4F55] mb-8" />
               <p className="text-[16px] leading-[1.7] text-[#4A8A91] mb-6 max-w-[520px]">
-                Bedrägerier kommer inte bara via samtal och SMS. Därför skannar Vishinguard även notifieringar från appar som Messenger och WhatsApp. Om en okänd avsändare skickar ett meddelande med misstänkt innehåll varnar riddaren dig direkt.
+                Bedrägerier kommer inte bara via samtal och SMS. Därför skannar Vishinguard även notifieringar från din vanliga SMS-app, WhatsApp, Messenger, Gmail och Outlook. Om en okänd avsändare skickar ett meddelande med misstänkt innehåll varnar riddaren dig direkt.
               </p>
               <div className="space-y-4">
                 {[
@@ -274,7 +274,7 @@ export default function KnowMorePage() {
                 </div>
                 <div className="px-6 py-3 bg-[#EAE1CC] border-t border-[#0D4F55]/10">
                   <span className="text-[10px] tracking-[0.15em] uppercase text-[#4A8A91]">
-                    Figur 2: Notification Analysis i realtid
+                    Figur 2: Notisanalys i realtid
                   </span>
                 </div>
               </div>
@@ -295,14 +295,14 @@ export default function KnowMorePage() {
             </h2>
             <div className="w-16 h-[2px] bg-[#4A8A91] mb-8" />
             <p className="text-[16px] leading-[1.7] text-[#F7F0E1]/80 mb-10 max-w-[600px]">
-              Vishinguard arbetar helt lokalt på din Android-telefon. Dina samtal, meddelanden och notifieringar skickas aldrig till någon server. Analysen görs på plats, och när den är klar finns ingen kvarstående information kvar hos oss.
+              Vishinguard arbetar helt lokalt på din Android-telefon. Dina samtal, meddelanden och notifieringar skickas aldrig till någon server. Analysen görs på plats, och när den är klar finns ingen kvarstående information kvar.
             </p>
             <div className="grid md:grid-cols-2 gap-6">
               {[
                 {
                   icon: Cpu,
                   title: "Lokal maskininlärning",
-                  desc: "Neurala nätverk körs direkt i mobilens processor utan internetberoende.",
+                  desc: "Neurala nätverk körs direkt i telefonens processor utan internetberoende.",
                 },
                 {
                   icon: Database,
@@ -350,7 +350,7 @@ export default function KnowMorePage() {
               Skydda dig själv eller <span className="font-[900] italic">någon du tycker om</span>
             </h2>
             <p className="text-[16px] leading-[1.7] text-[#4A8A91]">
-              Anmäl dig till väntelistan och få besked så snart Vishinguard finns att ladda ner på Android.
+              Anmäl dig till väntelistan och få besked så snart Vishinguard finns att ladda ner till din telefon.
             </p>
           </div>
 
@@ -361,7 +361,7 @@ export default function KnowMorePage() {
               sourceSection="cta-section"
               variant="light"
               title="Skydda dig själv eller någon du tycker om"
-              subtitle="Vishinguard lanseras på Android under våren 2025. Registrera din e-postadress nedan för att få en inbjudan."
+              subtitle="Skriv upp dig så meddelar vi dig när appen finns att ladda ner till din telefon. Första versionen släpps till Android."
             />
           </div>
         </div>
