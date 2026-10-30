@@ -32,7 +32,7 @@ export default function KnowledgePage() {
                 Uppdateras löpande
               </span>
             </div>
-            <h1 className="font-serif text-[48px] md:text-[64px] lg:text-[80px] font-[300] leading-[0.92] text-[#063338] tracking-tight">
+            <h1 className="font-serif text-[36px] sm:text-[44px] md:text-[54px] lg:text-[68px] font-[300] leading-[1.18] md:leading-[1.15] text-[#063338] tracking-normal">
               Lär dig känna igen
               <br />
               <span className="font-[900] italic">bedrägerier</span>
@@ -231,7 +231,7 @@ export default function KnowledgePage() {
               sourceSection="cta-section"
               variant="dark"
               title="Håll dig ett steg före bedrägarna"
-              subtitle="Vishinguard lanseras på Android under våren 2025. Registrera din e-post för att få direktbesked."
+              subtitle="Skriv upp dig så meddelar vi dig när appen finns att ladda ner till din telefon. Första versionen släpps till Android."
             />
           </div>
         </div>
