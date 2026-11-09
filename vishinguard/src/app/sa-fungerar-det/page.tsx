@@ -1,18 +1,17 @@
 import React from "react";
 import type { Metadata } from "next";
+import Image from "next/image";
 import {
   Radio,
   BrainCircuit,
   ShieldAlert,
   Sword,
-  CheckCircle,
-  AlertTriangle,
-  Bell,
   Cpu,
   Database,
   Users,
   Code,
   Eye,
+  CheckCircle,
 } from "lucide-react";
 import WaitlistForm from "@/components/WaitlistForm";
 
@@ -50,86 +49,171 @@ export default function KnowMorePage() {
               <span className="font-[900] italic">Vishinguard</span>
             </h1>
             <div className="w-20 h-[2px] bg-[#0D4F55] mt-8 mb-6" />
-            <p className="font-serif text-[18px] md:text-[22px] font-[300] leading-[1.45] text-[#4A8A91] max-w-[560px]">
-              Tre enkla steg mellan dig och en säkrare vardag. Lokal AI på din telefon med uppgift att skydda dig och din data.
+            <p className="font-serif text-[18px] md:text-[22px] font-[300] leading-[1.45] text-[#4A8A91] max-w-[620px]">
+              Tre enkla steg mellan dig och en säkrare vardag. Lokal AI på din
+              telefon med uppgift att skydda dig och aldrig dela din data.
             </p>
           </div>
         </div>
       </section>
 
-      {/* The 3 Steps */}
-      <section className="border-t border-[#0D4F55]/15">
+      {/* 1. Insamling Section (Image 3) */}
+      <section className="border-t border-[#0D4F55]/15 bg-[#F7F0E1]">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10 py-16 lg:py-24">
-          <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
-            {[
-              {
-                step: "01",
-                label: "Insamling",
-                title: "1. Insamling",
-                description:
-                  "Appen bevakar samtal, SMS, e-post och notifieringar från appar som Messenger och WhatsApp. Den läser endast innehållet i nya meddelanden från avsändare som inte redan finns i din telefonbok. Ingenting sparas – så fort AI:n har analyserat texten försvinner informationen igen.",
-                icon: Radio,
-              },
-              {
-                step: "02",
-                label: "AI-analys",
-                title: "2. AI-analys",
-                description:
-                  "Med hjälp av artificiell intelligens analyseras mönster, avsändare och innehåll i realtid. AI:n letar efter varningstecken som kända bluffmetoder, hotfulla formuleringar eller ovanliga förfrågningar. Allt sker direkt i din telefon via lokala modeller.",
-                icon: BrainCircuit,
-              },
-              {
-                step: "03",
-                label: "Ingrepp",
-                title: "3. Ingrepp",
-                description:
-                  "Om något ser misstänkt ut kliver riddaren in. Du får en tydlig varning på skärmen som ger dig tid att stanna upp och tänka. Ibland räcker det för att stoppa bedrägeriet innan det ens börjar.",
-                icon: ShieldAlert,
-              },
-            ].map((item, i) => (
-              <div key={i} className="relative">
-                <div className="mb-6">
-                  <span className="font-serif text-[72px] font-[900] text-[#0D4F55]/10 leading-none">
-                    {item.step}
-                  </span>
-                  <div className="flex items-center gap-3 -mt-4 relative">
-                    <div className="w-8 h-8 bg-[#0D4F55] rounded-sm flex items-center justify-center">
-                      <item.icon className="w-4 h-4 text-[#F7F0E1]" />
-                    </div>
-                    <span className="text-[11px] font-[600] tracking-[0.3em] uppercase text-[#C7452E]">
-                      {item.label}
+          <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
+            {/* Left: Text */}
+            <div className="flex-1">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-8 h-8 bg-[#0D4F55] rounded-sm flex items-center justify-center flex-shrink-0">
+                  <Radio className="w-4 h-4 text-[#F7F0E1]" />
+                </div>
+                <span className="text-[11px] font-[600] tracking-[0.3em] uppercase text-[#C7452E]">
+                  Steg 01 • Insamling
+                </span>
+              </div>
+              <h2 className="font-serif text-[36px] md:text-[48px] font-[300] text-[#063338] leading-[1.1] mb-6">
+                1. Insamling
+              </h2>
+              <div className="w-16 h-[2px] bg-[#0D4F55] mb-8" />
+              <p className="text-[16px] leading-[1.7] text-[#4A8A91] mb-6 max-w-[540px]">
+                Vishinguard fångar upp och skyddar dig mot farliga meddelanden
+                från flera olika platser på din telefon: din vanliga SMS-app,
+                Messenger, WhatsApp, Discord, Telegram, Outlook och Gmail.
+                Appen granskar endast inkommande meddelanden och samtal från
+                okända avsändare som inte finns i din telefonbok. Ingenting
+                sparas – så fort AI:n har gjort sin analys försvinner
+                informationen omedelbart.
+              </p>
+              <div className="space-y-4">
+                {[
+                  "Skyddar mot bedrägerier i din vanliga SMS-app, Messenger, WhatsApp, Discord, Telegram, Outlook och Gmail",
+                  "Kända kontakter, familj och vänner i din telefonbok lämnas helt ifred",
+                  "Ingen data sparas – allt rensas direkt så fort kontrollen är klar",
+                ].map((item, i) => (
+                  <div key={i} className="flex items-start gap-3">
+                    <Sword className="w-4 h-4 text-[#0D4F55] flex-shrink-0 mt-1" />
+                    <span className="text-[14px] leading-[1.5] text-[#063338]/85">
+                      {item}
                     </span>
                   </div>
-                </div>
-                <h3 className="font-serif text-[22px] font-[600] text-[#063338] mb-3">
-                  {item.title}
-                </h3>
-                <p className="text-[14px] leading-[1.7] text-[#4A8A91]">
-                  {item.description}
-                </p>
-                {i < 2 && (
-                  <div className="hidden md:block absolute top-16 -right-6 w-12 h-[1px] bg-[#0D4F55]/15" />
-                )}
+                ))}
               </div>
-            ))}
+            </div>
+
+            {/* Right: Illustration */}
+            <div className="lg:w-[480px] flex-shrink-0 w-full">
+              <div className="bg-[#EAE1CC] rounded-sm border border-[#0D4F55]/10 overflow-hidden shadow-sm">
+                <div className="relative aspect-[4/3] w-full bg-[#F7F0E1]">
+                  <Image
+                    src="/images/how-it-works-insamling.png"
+                    alt="Vishinguard riddare som i realtid granskar passerande meddelanden och samtal genom ett lysande förstoringsglas utan att spara någon data"
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 480px"
+                    className="object-cover"
+                    priority
+                  />
+                </div>
+                <div className="px-6 py-3 bg-[#EAE1CC] border-t border-[#0D4F55]/10">
+                  <span className="text-[10px] tracking-[0.15em] uppercase text-[#4A8A91]">
+                    Figur 1: Insamling granskar inkommande signaler i realtid medan de passerar – ingenting sparas
+                  </span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Bank Protection Section */}
-      <section className="bg-[#EAE1CC]">
+      {/* 2. AI-analys & Varning Section (Image 4) */}
+      <section className="bg-[#EAE1CC] border-t border-[#0D4F55]/15">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10 py-16 lg:py-24">
-          <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-start">
+          <div className="flex flex-col lg:flex-row-reverse gap-12 lg:gap-16 items-center">
+            {/* Right: Text */}
             <div className="flex-1">
-              <div className="text-[11px] font-[600] tracking-[0.3em] uppercase text-[#4A8A91] mb-4">
-                Skyddsfunktion
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-8 h-8 bg-[#0D4F55] rounded-sm flex items-center justify-center flex-shrink-0">
+                  <BrainCircuit className="w-4 h-4 text-[#F7F0E1]" />
+                </div>
+                <span className="text-[11px] font-[600] tracking-[0.3em] uppercase text-[#C7452E]">
+                  Steg 02 • AI-analys & Varning
+                </span>
+              </div>
+              <h2 className="font-serif text-[36px] md:text-[48px] font-[300] text-[#063338] leading-[1.1] mb-6">
+                2. AI-analys & Varning
+              </h2>
+              <div className="w-16 h-[2px] bg-[#0D4F55] mb-8" />
+              <p className="text-[16px] leading-[1.7] text-[#4A8A91] mb-6 max-w-[540px]">
+                Med hjälp av artificiell intelligens analyseras mönster, avsändare
+                och innehåll i realtid. AI:n läser och utvärderar varje meddelande
+                och sorterar det blixtsnabbt mot trygga gröna, försiktiga gula eller
+                farliga röda nivåer. Om ett misstänkt hot identifieras kliver
+                riddaren omedelbart in med en tydlig varning på skärmen som ger
+                dig tid att stanna upp, tänka efter och avbryta bedrägeriet.
+              </p>
+              <div className="space-y-4">
+                {[
+                  "Lokal maskininlärning analyserar och sorterar risknivån på bråkdelen av en sekund",
+                  "Känner omedelbart igen stressande knep och manipulativa formuleringar",
+                  "Tydlig varning som ger dig tid att stanna upp, andas och avbryta",
+                ].map((item, i) => (
+                  <div key={i} className="flex items-start gap-3">
+                    <ShieldAlert className="w-4 h-4 text-[#C7452E] flex-shrink-0 mt-1" />
+                    <span className="text-[14px] leading-[1.5] text-[#063338]/85">
+                      {item}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Left: Illustration */}
+            <div className="lg:w-[480px] flex-shrink-0 w-full">
+              <div className="bg-[#F7F0E1] rounded-sm border border-[#0D4F55]/10 overflow-hidden shadow-sm">
+                <div className="relative aspect-[4/3] w-full bg-[#F7F0E1]">
+                  <Image
+                    src="/images/how-it-works-aianalys.png"
+                    alt="Vishinguard riddare som granskar ett meddelande och sorterar det mot tre lysande zoner i grönt, gult och rött"
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 480px"
+                    className="object-cover"
+                  />
+                </div>
+                <div className="px-6 py-3 bg-[#EAE1CC] border-t border-[#0D4F55]/10">
+                  <span className="text-[10px] tracking-[0.15em] uppercase text-[#4A8A91]">
+                    Figur 2: AI-analysen utvärderar meddelandet och varnar direkt vid förhöjd risknivå
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 3. Bankskydd Section (Image 2) */}
+      <section className="border-t border-[#0D4F55]/15 bg-[#F7F0E1]">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-10 py-16 lg:py-24">
+          <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
+            {/* Left: Text */}
+            <div className="flex-1">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-8 h-8 bg-[#0D4F55] rounded-sm flex items-center justify-center flex-shrink-0">
+                  <Sword className="w-4 h-4 text-[#F7F0E1]" />
+                </div>
+                <span className="text-[11px] font-[600] tracking-[0.3em] uppercase text-[#C7452E]">
+                  Skyddsfunktion • Bankskydd
+                </span>
               </div>
               <h2 className="font-serif text-[36px] md:text-[48px] font-[300] text-[#063338] leading-[1.1] mb-6">
                 Bank<span className="font-[900] italic">skydd</span>
               </h2>
               <div className="w-16 h-[2px] bg-[#0D4F55] mb-8" />
-              <p className="text-[16px] leading-[1.7] text-[#4A8A91] mb-6 max-w-[520px]">
-                En av de farligaste situationerna är när någon ringer och låtsas vara från din bank samtidigt som de försöker få dig att öppna bankappen. Om Vishinguard flaggat samtalet som misstänkt och du försöker öppna din bankapp visas en varning som täcker hela skärmen i fem sekunder. Du får information om varför det är riskfyllt och kan sedan själv välja om du vill fortsätta eller avbryta.
+              <p className="text-[16px] leading-[1.7] text-[#4A8A91] mb-6 max-w-[540px]">
+                En av de farligaste situationerna är när någon ringer och låtsas
+                vara från din bank samtidigt som de försöker få dig att öppna
+                bankappen. Om Vishinguard flaggat samtalet som misstänkt och du
+                försöker öppna din bankapp visas en varning som täcker hela skärmen
+                i fem sekunder. Du får information om varför det är riskfyllt och
+                kan sedan själv välja om du vill fortsätta eller avbryta.
               </p>
               <div className="space-y-4">
                 {[
@@ -148,40 +232,21 @@ export default function KnowMorePage() {
               </div>
             </div>
 
-            <div className="lg:w-[400px] flex-shrink-0 w-full">
-              <div className="bg-[#F7F0E1] rounded-sm border border-[#0D4F55]/10 overflow-hidden shadow-sm">
-                <div className="p-6 pb-4">
-                  <div className="flex items-center gap-2 mb-4">
-                    <div className="w-3 h-3 rounded-full bg-[#C7452E] animate-pulse" />
-                    <span className="text-[10px] font-[600] tracking-[0.2em] uppercase text-[#C7452E]">
-                      Varning aktiverad
-                    </span>
-                  </div>
-                  <div className="bg-[#063338] rounded-sm p-5 mb-4">
-                    <div className="flex items-start gap-3">
-                      <ShieldAlert className="w-6 h-6 text-[#C7452E] flex-shrink-0" />
-                      <div>
-                        <div className="font-serif text-[16px] font-[600] text-[#F7F0E1] mb-1">
-                          Bankappen tillfälligt pausad
-                        </div>
-                        <div className="text-[12px] leading-[1.5] text-[#F7F0E1]/70">
-                          Ett pågående samtal har flaggats som misstänkt bankbluff. Öppna inte bankappen på uppmaning av någon i telefonen.
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="flex gap-3">
-                    <button className="flex-1 h-10 bg-[#0D4F55] text-[#F7F0E1] text-[12px] font-[600] rounded-sm hover:bg-[#063338] transition-colors">
-                      Avbryt samtalet
-                    </button>
-                    <button className="flex-1 h-10 border border-[#0D4F55]/20 text-[#4A8A91] text-[12px] font-[600] rounded-sm hover:border-[#0D4F55]/40 transition-colors">
-                      Jag litar på personen
-                    </button>
-                  </div>
+            {/* Right: Illustration */}
+            <div className="lg:w-[480px] flex-shrink-0 w-full">
+              <div className="bg-[#EAE1CC] rounded-sm border border-[#0D4F55]/10 overflow-hidden shadow-sm">
+                <div className="relative aspect-[4/3] w-full bg-[#F7F0E1]">
+                  <Image
+                    src="/images/how-it-works-bankskydd.png"
+                    alt="Vishinguard riddare som står som lojal livvakt framför ett bankvalv och blockerar en skuggfigur av en bedragare"
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 480px"
+                    className="object-cover"
+                  />
                 </div>
                 <div className="px-6 py-3 bg-[#EAE1CC] border-t border-[#0D4F55]/10">
                   <span className="text-[10px] tracking-[0.15em] uppercase text-[#4A8A91]">
-                    Figur 1: Bankskydd skyddar under samtalet
+                    Figur 3: Bankskydd agerar livvakt och spärrar bedragaren från bankvalvet
                   </span>
                 </div>
               </div>
@@ -190,20 +255,29 @@ export default function KnowMorePage() {
         </div>
       </section>
 
-      {/* Notification Analysis Section */}
-      <section className="border-t border-[#0D4F55]/15">
+      {/* 4. Notisanalys Section (Image 1) */}
+      <section className="bg-[#EAE1CC] border-t border-[#0D4F55]/15">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10 py-16 lg:py-24">
-          <div className="flex flex-col lg:flex-row-reverse gap-12 lg:gap-16 items-start">
+          <div className="flex flex-col lg:flex-row-reverse gap-12 lg:gap-16 items-center">
+            {/* Right: Text */}
             <div className="flex-1">
-              <div className="text-[11px] font-[600] tracking-[0.3em] uppercase text-[#4A8A91] mb-4">
-                Skyddsfunktion
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-8 h-8 bg-[#0D4F55] rounded-sm flex items-center justify-center flex-shrink-0">
+                  <Eye className="w-4 h-4 text-[#F7F0E1]" />
+                </div>
+                <span className="text-[11px] font-[600] tracking-[0.3em] uppercase text-[#C7452E]">
+                  Skyddsfunktion • Notisanalys
+                </span>
               </div>
               <h2 className="font-serif text-[36px] md:text-[48px] font-[300] text-[#063338] leading-[1.1] mb-6">
                 Notis<span className="font-[900] italic">analys</span>
               </h2>
               <div className="w-16 h-[2px] bg-[#0D4F55] mb-8" />
-              <p className="text-[16px] leading-[1.7] text-[#4A8A91] mb-6 max-w-[520px]">
-                Bedrägerier kommer inte bara via samtal och SMS. Därför skannar Vishinguard även notifieringar från din vanliga SMS-app, WhatsApp, Messenger, Gmail och Outlook. Om en okänd avsändare skickar ett meddelande med misstänkt innehåll varnar riddaren dig direkt.
+              <p className="text-[16px] leading-[1.7] text-[#4A8A91] mb-6 max-w-[540px]">
+                Bedrägerier kommer inte bara via samtal och SMS. Därför skannar
+                Vishinguard även notifieringar från din vanliga SMS-app, WhatsApp,
+                Messenger, Gmail och Outlook. Om en okänd avsändare skickar ett
+                meddelande med misstänkt innehåll varnar riddaren dig direkt.
               </p>
               <div className="space-y-4">
                 {[
@@ -222,59 +296,21 @@ export default function KnowMorePage() {
               </div>
             </div>
 
-            <div className="lg:w-[400px] flex-shrink-0 w-full">
+            {/* Left: Illustration */}
+            <div className="lg:w-[480px] flex-shrink-0 w-full">
               <div className="bg-[#F7F0E1] rounded-sm border border-[#0D4F55]/10 overflow-hidden shadow-sm">
-                <div className="p-6 pb-4">
-                  <div className="space-y-3">
-                    <div className="flex items-center gap-3 p-3 bg-[#EAE1CC] rounded-sm border border-[#0D4F55]/8">
-                      <div className="w-10 h-10 bg-[#0D4F55] rounded-sm flex items-center justify-center flex-shrink-0">
-                        <Bell className="w-5 h-5 text-[#F7F0E1]" />
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <div className="text-[12px] font-[600] text-[#063338] truncate">
-                          Swish
-                        </div>
-                        <div className="text-[11px] text-[#4A8A91] truncate">
-                          Betalning från kontakt godkänd
-                        </div>
-                      </div>
-                      <CheckCircle className="w-5 h-5 text-[#0D4F55] flex-shrink-0" />
-                    </div>
-
-                    <div className="flex items-center gap-3 p-3 bg-[#C7452E]/5 rounded-sm border border-[#C7452E]/20">
-                      <div className="w-10 h-10 bg-[#C7452E] rounded-sm flex items-center justify-center flex-shrink-0">
-                        <Bell className="w-5 h-5 text-[#F7F0E1]" />
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <div className="text-[12px] font-[600] text-[#063338] truncate">
-                          Okänt nummer (SMS)
-                        </div>
-                        <div className="text-[11px] text-[#C7452E] truncate">
-                          Varning: Falsk länk om paketleverans upptäckt
-                        </div>
-                      </div>
-                      <AlertTriangle className="w-5 h-5 text-[#C7452E] flex-shrink-0" />
-                    </div>
-
-                    <div className="flex items-center gap-3 p-3 bg-[#EAE1CC] rounded-sm border border-[#0D4F55]/8">
-                      <div className="w-10 h-10 bg-[#0D4F55] rounded-sm flex items-center justify-center flex-shrink-0">
-                        <Bell className="w-5 h-5 text-[#F7F0E1]" />
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <div className="text-[12px] font-[600] text-[#063338] truncate">
-                          WhatsApp (Familj)
-                        </div>
-                        <div className="text-[11px] text-[#4A8A91] truncate">
-                          Nytt meddelande från känd kontakt
-                        </div>
-                      </div>
-                      <CheckCircle className="w-5 h-5 text-[#0D4F55] flex-shrink-0" />
-                    </div>
-                  </div>
+                <div className="relative aspect-[4/3] w-full bg-[#F7F0E1]">
+                  <Image
+                    src="/images/how-it-works-notisanalys.png"
+                    alt="Vishinguard riddare med förstoringsglas som granskar inkommande meddelanden från en telefon och blockerar misstänkta länkar"
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 480px"
+                    className="object-cover"
+                  />
                 </div>
                 <div className="px-6 py-3 bg-[#EAE1CC] border-t border-[#0D4F55]/10">
                   <span className="text-[10px] tracking-[0.15em] uppercase text-[#4A8A91]">
-                    Figur 2: Notisanalys i realtid
+                    Figur 4: Notisanalys granskar inkommande aviseringar i realtid
                   </span>
                 </div>
               </div>
@@ -295,7 +331,10 @@ export default function KnowMorePage() {
             </h2>
             <div className="w-16 h-[2px] bg-[#4A8A91] mb-8" />
             <p className="text-[16px] leading-[1.7] text-[#F7F0E1]/80 mb-10 max-w-[600px]">
-              Vishinguard arbetar helt lokalt på din Android-telefon. Dina samtal, meddelanden och notifieringar skickas aldrig till någon server. Analysen görs på plats, och när den är klar finns ingen kvarstående information kvar.
+              Vishinguard arbetar helt lokalt på din Android-telefon. Dina
+              samtal, meddelanden och notifieringar skickas aldrig till någon
+              server. Analysen görs på plats, och när den är klar finns ingen
+              kvarstående information kvar.
             </p>
             <div className="grid md:grid-cols-2 gap-6">
               {[
@@ -347,10 +386,12 @@ export default function KnowMorePage() {
               Bli en av de första
             </div>
             <h2 className="font-serif text-[36px] md:text-[48px] font-[300] text-[#063338] leading-[1.1] mb-6">
-              Skydda dig själv eller <span className="font-[900] italic">någon du tycker om</span>
+              Skydda dig själv eller{" "}
+              <span className="font-[900] italic">någon du tycker om</span>
             </h2>
             <p className="text-[16px] leading-[1.7] text-[#4A8A91]">
-              Anmäl dig till väntelistan och få besked så snart Vishinguard finns att ladda ner till din telefon.
+              Anmäl dig till väntelistan och få besked så snart Vishinguard finns
+              att ladda ner till din telefon.
             </p>
           </div>
 

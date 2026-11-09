@@ -151,13 +151,17 @@ export default function HomePage() {
                 step: "01",
                 label: "Insamling",
                 title: "1. Insamling",
+                image: "/images/how-it-works-insamling.png",
+                alt: "Insamling och realtidsgranskning av samtal och meddelanden",
                 description:
-                  "Appen bevakar samtal, SMS, e-post och notifieringar från appar som Messenger och WhatsApp. Den läser endast innehållet från okända avsändare. Kända kontakter lämnas ifred.",
+                  "Appen fångar upp farliga meddelanden och samtal i din vanliga SMS-app, Messenger, WhatsApp, Discord, Telegram, Outlook och Gmail. Den läser endast innehåll från okända avsändare. Kända kontakter lämnas ifred.",
               },
               {
                 step: "02",
                 label: "AI-analys",
                 title: "2. AI-analys",
+                image: "/images/how-it-works-aianalys.png",
+                alt: "Lokal AI-analys och riskvärdering",
                 description:
                   "Med hjälp av maskininlärning analyseras mönster, avsändare och innehåll i realtid. AI:n letar efter kända bluffmetoder direkt i din telefon utan fördröjning.",
               },
@@ -165,16 +169,27 @@ export default function HomePage() {
                 step: "03",
                 label: "Ingrepp",
                 title: "3. Ingrepp",
+                image: "/images/how-it-works-bankskydd.png",
+                alt: "Ingrepp och skydd mot bedrägeri",
                 description:
                   "Om något ser misstänkt ut kliver riddaren in. Du får en tydlig varning på skärmen som ger dig tid att stanna upp, tänka efter och avbryta bedrägeriet.",
               },
             ].map((item, i) => (
               <div key={i} className="relative">
-                <div className="mb-6">
-                  <span className="font-serif text-[72px] font-[900] text-[#0D4F55]/10 leading-none">
+                <div className="relative aspect-[16/10] w-full rounded-sm overflow-hidden mb-6 border border-[#0D4F55]/10 bg-[#EAE1CC]/60 shadow-sm">
+                  <Image
+                    src={item.image}
+                    alt={item.alt}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className="object-cover"
+                  />
+                </div>
+                <div className="mb-4">
+                  <span className="font-serif text-[56px] font-[900] text-[#0D4F55]/10 leading-none">
                     {item.step}
                   </span>
-                  <div className="text-[11px] font-[600] tracking-[0.3em] uppercase text-[#C7452E] -mt-4 relative">
+                  <div className="text-[11px] font-[600] tracking-[0.3em] uppercase text-[#C7452E] -mt-3 relative">
                     {item.label}
                   </div>
                 </div>
@@ -184,9 +199,6 @@ export default function HomePage() {
                 <p className="text-[14px] leading-[1.7] text-[#4A8A91]">
                   {item.description}
                 </p>
-                {i < 2 && (
-                  <div className="hidden md:block absolute top-12 -right-6 w-12 h-[1px] bg-[#0D4F55]/15" />
-                )}
               </div>
             ))}
           </div>
@@ -269,6 +281,8 @@ export default function HomePage() {
                 icon: Lock,
                 accent: "Bankskydd",
                 title: "Bankskydd",
+                image: "/images/how-it-works-bankskydd.png",
+                alt: "Bankskydd som tillfälligt blockerar bankappen vid riskfyllda samtal",
                 description:
                   "Varnar när du öppnar bankappen under ett misstänkt samtal. När en bedragare försöker få dig att godkänna med BankID blockeras appen tillfälligt i 5 sekunder.",
               },
@@ -276,6 +290,8 @@ export default function HomePage() {
                 icon: Eye,
                 accent: "Notisanalys",
                 title: "Notisanalys",
+                image: "/images/how-it-works-notisanalys.png",
+                alt: "Notisanalys som granskar inkommande aviseringar och länkar",
                 description:
                   "Läser och varnar för misstänkta meddelanden i din vanliga SMS-app, WhatsApp, Messenger, Gmail och Outlook. Okända avsändare med misstänkta länkar eller förfrågningar flaggas direkt.",
               },
@@ -283,16 +299,27 @@ export default function HomePage() {
                 icon: Cpu,
                 accent: "Realtidsskydd",
                 title: "Realtidsskydd",
+                image: "/images/how-it-works-insamling.png",
+                alt: "Realtidsskydd som granskar samtal och meddelanden lokalt",
                 description:
                   "Analyserar samtal och meddelanden medan de sker — helt lokalt på din telefon. Ingen data lämnar din telefon, ingen molnlagring, full integritet.",
               },
             ].map((card, i) => (
               <div
                 key={i}
-                className="bg-[#F7F0E1] rounded-sm p-8 border border-[#0D4F55]/8 hover:border-[#0D4F55]/20 transition-colors"
+                className="bg-[#F7F0E1] rounded-sm p-6 lg:p-8 border border-[#0D4F55]/8 hover:border-[#0D4F55]/20 transition-colors flex flex-col"
               >
-                <div className="flex items-center gap-2 mb-6">
-                  <div className="w-8 h-8 bg-[#0D4F55] rounded-sm flex items-center justify-center">
+                <div className="relative aspect-[16/10] w-full rounded-sm overflow-hidden mb-6 border border-[#0D4F55]/10 bg-[#EAE1CC]/40 shadow-sm">
+                  <Image
+                    src={card.image}
+                    alt={card.alt}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className="object-cover"
+                  />
+                </div>
+                <div className="flex items-center gap-2 mb-4">
+                  <div className="w-8 h-8 bg-[#0D4F55] rounded-sm flex items-center justify-center flex-shrink-0">
                     <card.icon className="w-4 h-4 text-[#F7F0E1]" />
                   </div>
                   <span className="text-[10px] font-[600] tracking-[0.25em] uppercase text-[#C7452E]">
@@ -302,7 +329,7 @@ export default function HomePage() {
                 <h3 className="font-serif text-[22px] font-[600] text-[#063338] mb-3 leading-[1.25]">
                   {card.title}
                 </h3>
-                <p className="text-[14px] leading-[1.7] text-[#4A8A91]">
+                <p className="text-[14px] leading-[1.7] text-[#4A8A91] flex-1">
                   {card.description}
                 </p>
               </div>
